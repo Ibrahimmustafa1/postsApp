@@ -1,0 +1,18 @@
+<mat-card>
+  <form [formGroup]="loginForm" (ngSubmit)="login(loginForm)">
+    <mat-form-field>
+      <input formControlName="email" matInput name="email" placeholder="email" required>
+      <mat-error *ngIf="loginForm.controls.email?.invalid">Title Is Required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input type="password" formControlName="password" form matInput placeholder="password" name="password" id=""
+        cols="30" rows="10" required>
+      <mat-error *ngIf="loginForm.controls.password?.invalid">content Is Required</mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" [disabled]="!loginForm.valid">Login</button>
+
+  </form>
+  <mat-error class="err" *ngIf="err">{{err.error.status||'Internal Server Error'}}</mat-error>
+</mat-card>

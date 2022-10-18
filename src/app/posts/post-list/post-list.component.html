@@ -1,0 +1,22 @@
+<mat-accordion *ngIf="totalPosts">
+  <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" *ngFor="let post of posts">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{post.title}}
+      </mat-panel-title>
+
+    </mat-expansion-panel-header>
+    {{post.content}}
+    <mat-action-row>
+    <img [src]="post.imgPath" alt="">
+    </mat-action-row>
+    <mat-action-row *ngIf="post.createdBy===userId &&isAuth">
+      <button mat-button color="primary" [routerLink]="['/edit',post._id]">Edit</button>
+      <button mat-button color="warn" (click)="deletePost(post)">Delete</button>
+    </mat-action-row>
+
+  </mat-expansion-panel>
+  <mat-paginator [pageSizeOptions]="[1, 2, 5,10]" [length]="totalPosts" [pageSize]="postsPerPage" (page)="onPageChange($event)"  showFirstLastButtons
+  aria-label="Select page of periodic elements">
+</mat-paginator>
+</mat-accordion>

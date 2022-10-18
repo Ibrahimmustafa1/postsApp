@@ -1,0 +1,12 @@
+
+:host {
+  margin-top: 1rem;
+  display: block
+}
+img{
+  width: 30%;
+  height: 20%;
+  display: block;
+  margin: auto;
+  object-fit: cover;
+}

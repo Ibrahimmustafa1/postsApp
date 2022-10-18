@@ -1,0 +1,30 @@
+<mat-card>
+  <form [formGroup]="registerForm" (ngSubmit)="register(registerForm)">
+    <mat-form-field>
+      <input formControlName="name" matInput name="name" placeholder="name">
+      <mat-error *ngIf="registerForm.controls.name?.errors?.required &&registerForm.controls.name.touched">name Is Required
+      </mat-error>
+      <mat-error *ngIf="registerForm.controls.name?.errors?.minlength &&registerForm.controls.name.touched">name must be
+        >= 3 characters</mat-error>
+
+    </mat-form-field>
+
+    <mat-form-field>
+      <input formControlName="email" matInput name="email" placeholder="email">
+      <mat-error *ngIf="registerForm.controls.email?.errors?.required && register">Title Is Required</mat-error>
+      <mat-error *ngIf="registerForm.controls.email?.errors?.email">it must be a valid email</mat-error>
+
+    </mat-form-field>
+
+    <mat-form-field>
+      <input type="password" formControlName="password" form matInput placeholder="password" name="password" id=""
+        cols="30" rows="10">
+      <mat-error *ngIf="registerForm.controls.password?.invalid">Password Is Required</mat-error>
+    </mat-form-field>
+
+    <mat-error class="serverError" *ngIf="err">email or user name is already in use</mat-error>
+
+    <button mat-raised-button color="primary" [disabled]="!registerForm.valid">register</button>
+
+  </form>
+</mat-card>

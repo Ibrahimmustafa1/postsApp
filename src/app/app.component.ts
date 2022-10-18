@@ -1,3 +1,4 @@
+import { Postinterface } from './posts/postinterface';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'postsApp';
+  posts: any = [];
+  onPostAdded(post: Postinterface) {
+
+    this.posts.push(post);
+  }
 }
