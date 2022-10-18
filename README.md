@@ -51,9 +51,6 @@ DELETE    /posts/:id        Delete a campground
 - MongoDb
 - Jwt Token
 
-
-Check [`package.json`](https://github.com/Hsins/udemy_Yelp-Camp/blob/master/package.json) file for more information.
-
 # Getting Started
 
 Follow the instructions below to set up the environment and run this project on your local machine.
