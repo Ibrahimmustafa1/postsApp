@@ -7,6 +7,7 @@ import { PostsCreateComponent } from './posts/posts-create/posts-create.componen
 import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/posts', pathMatch: 'full' },
   { path: 'posts', component: PostListComponent },
   { path: 'create', canActivate: [AuthGuard], component: PostsCreateComponent },
   { path: 'edit/:postId', canActivate: [AuthGuard], component: PostsCreateComponent },
