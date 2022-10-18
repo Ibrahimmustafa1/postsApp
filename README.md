@@ -55,6 +55,7 @@ DELETE    /posts/:id        Delete a campground
 
 Follow the instructions below to set up the environment and run this project on your local machine.
 
+
 1. Install dependencies via NPM or Yarn
 
 ```bash
@@ -63,10 +64,10 @@ $ npm install
 
 # Install dependencies via yarn
 $ yarn install
+
+# Run Angular App
+$ ng s -o
 ```
-
-3. Run the server with [nodemon](https://nodemon.io/) and open a browser to visit [http://localhost:3000/](http://localhost:3000/).
-
 ```bash
 $ npm start
 ```
