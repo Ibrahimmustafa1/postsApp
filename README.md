@@ -2,7 +2,7 @@
  My first Mean app 
   
 # Demo
-<ahttps://ibrahimmustafa1.github.io/postsApp/posts>postsApp</a>
+<a href='https://ibrahimmustafa1.github.io/postsApp/posts'>postsApp</a>
 
 # Features
 
