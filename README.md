@@ -7,8 +7,10 @@
 # Features
 
 - Responsive web design (RWD)
-- User authentication (Login/Register/Logout) and authorization (Post/Like/Edit)
-- Flash messages responding to users' interaction
+- User authentication (Login/Register/Logout) and authorization
+- Spa App
+- Angular 
+- Angular Material
 - Refactored with ES6 and ES7 syntax (eg: async/await)
 - RESTful API
 
@@ -37,6 +39,7 @@ DELETE    /posts/:id        Delete a campground
 
 - Angular 2+
 - TypeScript
+- Angular Material
 - Html
 - Css
 
