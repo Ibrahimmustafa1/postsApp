@@ -1,27 +1,106 @@
-# PostsApp
+# YelpCamp
+ My first Mean app using 
+  
+# Demo
+<ahttps://ibrahimmustafa1.github.io/postsApp/posts>postsApp</a>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.0.
+# Features
 
-## Development server
+- Responsive web design (RWD)
+- User authentication (Login/Register/Logout) and authorization (Post/Like/Edit)
+- Flash messages responding to users' interaction
+- Refactored with ES6 and ES7 syntax (eg: async/await)
+- RESTful API
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```
+-------------------------------------------------------------------------
+Normal Routes
+-------------------------------------------------------------------------
+[Method]  [Route]
+GET       /                       Landing page
+GET       /login                  Request the user login page
+GET       /register               Request the user edit page
 
-## Code scaffolding
+-------------------------------------------------------------------------
+Users Route
+-------------------------------------------------------------------------
+[Method]  [Route]
+GET       /users                  Fetch all users
+POST      /users                  Create new user in database
+GET       /users/new              Request the user register page
+GET       /users/:id              Show the user information
+PATCH     /users/:id              Update user information
+DELETE    /users/:id              Delete user information
+GET       /users/:id/edit         Request the user edit page
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+-------------------------------------------------------------------------
+Sessions Route
+-------------------------------------------------------------------------
+[Method]  [Route]
+POST      /sessions               Create a session (user login)
+GET       /sessions/login         Request the user login page
+DELETE    /sessions               Delete a session (user logout)
 
-## Build
+-------------------------------------------------------------------------
+Campgrounds Route
+-------------------------------------------------------------------------
+[Method]  [Route]
+GET       /campgrounds            Fetch all campgrounds
+POST      /campgrounds            Create a new campground to database
+GET       /campgrounds/new        Request the campground adding page
+GET       /campgrounds/:id        Show the campground information
+PUT       /campgrounds/:id        Update campground information (all)
+PATCH     /campgrounds/:id        Update campground information (part)
+DELETE    /campgrounds/:id        Delete a campground
+GET       /campgrounds/:id/edit   Request the campground editing page
+POST      /campgrounds/:id/likes  Like the campground
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+-------------------------------------------------------------------------
+Comments Route
+-------------------------------------------------------------------------
+[Method]  [Route]
+POST      /campgrounds/:id/comments       Create a new comment
+PATCH     /campgrounds/:id/comments/:cid  Update comment
+DELETE    /campgrounds/:id/comments/:cid  Delete comment
+```
 
-## Running unit tests
+# Technologies
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Frontend
 
-## Running end-to-end tests
+- Angular 2+
+- TypeScript
+- Html
+- Css
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice.
 
-## Further help
+## Backend
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Node js
+- Express
+- MongoDb
+- Jwt Token
+
+
+Check [`package.json`](https://github.com/Hsins/udemy_Yelp-Camp/blob/master/package.json) file for more information.
+
+# Getting Started
+
+Follow the instructions below to set up the environment and run this project on your local machine.
+
+1. Install dependencies via NPM or Yarn
+
+```bash
+# Install dependencies via npm
+$ npm install
+
+# Install dependencies via yarn
+$ yarn install
+```
+
+3. Run the server with [nodemon](https://nodemon.io/) and open a browser to visit [http://localhost:3000/](http://localhost:3000/).
+
+```bash
+$ npm start
+```
+
